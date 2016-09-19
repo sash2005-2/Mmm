@@ -1,5 +1,5 @@
-
 {% extends 'mmmm/base.html' %}
+{% load staticfiles %}
 
 {% block title %}
     Александр
@@ -18,7 +18,7 @@
                         <h4><p>Данный сайт носит информационный характер</p>
                             <p>и представляет краткую биографию</p></h4>
                     </td>
-                    <td class="tree"><img src="#" height="90" width="70"></td>
+                    <td class="tree"><img src="{% static 'img/Iam.jpg' %}" height="90" width="auto"></td>
                 </tr>
             </table>
         </div>
