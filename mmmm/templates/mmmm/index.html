@@ -1,0 +1,40 @@
+
+{% extends 'mmmm/base.html' %}
+
+{% block title %}
+    Александр
+{% endblock %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block afternav %}
+    <div id="cont_inner">
+        <div class="inner">
+            <table >
+                <tr>
+                    <td class="one"><h1>Главная</h1></td>
+                    <td class="two">
+                        <h4><p>Данный сайт носит информационный характер</p>
+                            <p>и представляет краткую биографию</p></h4>
+                    </td>
+                    <td class="tree"><img src="#" height="90" width="70"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main_content %}
+    <div id="content_second">
+        {% for article in articles %}
+                        <!--<h4><a href="{% url 'article' article.id %}">{{ article.title }}</a></h4>
+            <p>{{ article.get_short_text }}</p>-->
+            <div id="text_container" >
+            <h4>Всем привет</h4>
+            <p>{{ article.text }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

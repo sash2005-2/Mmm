@@ -1,0 +1,17 @@
+{% extends 'mmmm/base.html' %}
+
+{% block title %}
+    {{ article.title }}
+
+{% endblock %}
+
+{% block navigation %}
+                    <td><a href="{% url 'main' %}">{{ article.title }}</a></td>
+{% endblock %}
+
+{% block main_content %}
+    <div id="content_second">
+        <h4>{{ article.title }}</h4>
+        <pre>{{ article.text }}</pre>
+    </div>
+{% endblock %}

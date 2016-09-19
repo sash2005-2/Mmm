@@ -1,0 +1,139 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>{% block title %}{% endblock %} &ndash; ПОРТФОЛИО</title>
+    <meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+    <meta name="description" content="#, initial-scale=1">
+    <meta name="keywords" content="#">
+    <link href="{% static 'mmmm/main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div id="header_gray">
+            <div id="tab">
+                <table>
+                    <tr>
+                        <td><p class="red">тел. +7-962-315-85-64</p></td>
+                        <td><p class="min_text">
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="header_blue">
+            <h2>Крохалев Александр Геннадьевич</h2>
+            <div id="search">
+                <form action="#" class="search-form">
+                    <input type="search" class="search" placeholder="введите запрос..."/>
+                </form>
+            </div>
+        </div>
+        <!--Меню beging-->
+        <div class="hor_menu">
+            <nav role='navigation'>
+                <ul>
+                    <li><a href="{% url 'main' %}">Главная</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'portpholyo' %}">Портфолио</a>
+                        <ul>
+                            <li><a href="">Портфолио</a></li>
+                            <li><a href="">Портфолио</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'CV' %}">Резюме</a>
+                        <ul>
+                            <li><a href="">Резюме</a></li>
+                            <li><a href="">Резюме</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'aboutMe' %}">О себе</a>
+                        <ul>
+                            <li><a href="">Учеба</a></li>
+                            <li><a href="">Работа</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'develop' %}">Программирование</a>
+                        <ul>
+                            <li><a href="">JAVA</a></li>
+                            <li><a href="">Python</a></li>
+                            <li><a href="">CS</a></li>
+                            <li><a href="">SQL</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'hobby' %}">Увлечения</a>
+                        <ul>
+                            <li><a href="">Увлечения</a></li>
+                            <li><a href="">Увлечения</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'contact' %}">Контакты</a>
+                    </li>
+        <!--Меню end-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="main_content">
+        <div id="navhor">
+
+                <table class="table_navhor">
+                    <tr>
+                        <td><a href="{% url 'main' %}">Главная</a></td>
+            {% block  navigation %}
+            {% endblock %}
+                    </tr>
+
+            </table>
+        </div>
+
+
+                {% block afternav %}
+
+                {% endblock %}
+
+
+
+    {% block main_content %}
+
+    {% endblock %}
+    </div>
+    <div id="clear"></div>
+	<div id="new_footer">
+	    <div class="foot_one">
+		    <table>
+			    <tr>
+				    <td class="one"><p class="red">тел. +7-962-315-85-64</p></td>
+				    <td class="two">
+                        <h4>Инструменты</h4>
+                        <h6>Python 3.5.2</h6>
+                        <h6>Django 1.10.1</h6>
+                        <h6>HTML</h6>
+                        <h6>CSS</h6>
+                        <h6>PyCharm</h6>
+                        <h6>MySQL</h6>
+
+					</td>
+				    <td class="three">
+
+					</td>
+				    <td class="four">
+
+					</td>
+				</tr>
+			</table>
+	    </div>
+	    <div class="foot_two"> 
+		    <div class="my_copy">
+			    <p>Copyright &copy; 2016 "Александр". Все права защищены.<br>Любое копирование материала запрещено.</p>
+		     </div>
+		
+		
+	    </div>
+	</div>
+</div>
+</body>
+</html>
